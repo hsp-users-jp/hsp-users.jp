@@ -55,3 +55,16 @@ html {
   margin-top: 0 !important;
 }
 
+.cbp_tmlabel {
+  padding: 1em !important;
+}
+
+.cbp_tmicon > .fa-windows {
+  font-size: 1.25em;
+  line-height: 1.5em;
+  vertical-align: baseline;
+}
+
+.cbp_tmlabel a {
+  color: #fff;
+}

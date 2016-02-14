@@ -1,0 +1,19 @@
+{
+  "name": "blueprint-vertical-timeline",
+  "version": "1.0.1",
+  "dependencies": {
+    "font-awesome": "~4.0.3",
+    "modernizr": "~2.7.2"
+  },
+  "main": "css/component.css",
+  "homepage": "https://github.com/gion/Blueprint-VerticalTimeline",
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.1",
+    "commit": "addbe780553b907ce88a8313ee0c3b5bcc2ee700"
+  },
+  "_source": "git://github.com/gion/Blueprint-VerticalTimeline.git",
+  "_target": "^1.0.1",
+  "_originalSource": "blueprint-vertical-timeline"
+}

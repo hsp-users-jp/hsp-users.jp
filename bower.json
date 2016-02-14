@@ -14,6 +14,7 @@
   "dependencies": {
     "jquery": "^1.1.0",
     "bootstrap": "^3.3.6",
-    "font-awesome": "^4.0.3"
+    "font-awesome": "^4.5.0",
+    "blueprint-vertical-timeline": "^1.0.1"
   }
 }
