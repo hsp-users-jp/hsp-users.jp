@@ -20,6 +20,9 @@
     <!-- Timeline -->
     <link href="components/blueprint-vertical-timeline/css/component.css" rel="stylesheet">
 
+    <!-- Section menu -->
+    <link href="components/jQuery.sectionMenu/assets/css/jquery.sectionmenu.css" rel="stylesheet">
+
     <!-- Custom styles for this page -->
     <link href="assets/css/custom.css" rel="stylesheet">
 
@@ -61,14 +64,17 @@
     <div class="container">
 
       <!-- Jumbotron -->
-      <div class="jumbotron" id="home">
+      <section id="home" data-section-menu="トップ">
+      <div class="jumbotron">
         <h1>さあ HSP をはじめましょう</h1>
         <p class="lead">Hot Soup Processor 、略して HSP は Windows はもとより Android や iOS でも、あなたの作ったプログラムを動かすことが出来ます。</p>
         <p><i class="fa fa-windows fa-2x"></i> <i class="fa fa-apple fa-2x"></i> <i class="fa fa-android fa-2x"></i> <i class="fa fa-html5 fa-2x"></i></p>
         <p><a class="btn btn-lg btn-success" href="http://hsp.tv/" role="button">HSP 3 をダウンロード</a></p>
       </div>
+      </section>
 
-      <div class="page-header" id="tweet">
+      <section id="tweet" data-section-menu="ツイート">
+      <div class="page-header">
         <h1><i class="fa fa-twitter"></i> #hsp3 <small>HSP公式推奨タグでつぶやかれている内容</small></h1>
       </div>
 
@@ -89,7 +95,10 @@
 </div>
 </div>
 
-      <div class="page-header" id="history">
+      </section>
+      <section id="history" data-section-menu="HSPの歴史">
+
+      <div class="page-header">
         <h1><i class="fa fa-history"></i> 歴史 <small>HSPの誕生から現在までの歩み</small></h1>
       </div>
   
@@ -173,14 +182,17 @@
       		</div>
       	</li>
         <li>
-      		<time class="cbp_tmtime"><span>現在</span></time>
+      		<time class="cbp_tmtime" datetime="2016"><span>現在</span></time>
       		<div class="cbp_tmicon"><i class="fa fa-angle-double-down fa-lg"></i></div>
       		<div class="cbp_tmlabel" style="visibility: hidden;">
       		</div>
       	</li>
       </ul>
 
-      <div class="page-header" id="link">
+      </section>
+      <section id="link" data-section-menu="リンク">
+
+      <div class="page-header">
         <h1><i class="fa fa-link"></i> リンク <small>オフィシャルサイトや関連するサイト</small></h1>
       </div>
 
@@ -197,8 +209,10 @@
         <li><i class="fa-li fa fa-external-link"></i><a href="http://hsproom.me/">HSP部屋(β)</a></li>
       </ul>
 
+      </section>
+      <section id="fork-me" data-section-menu="Fork me">
 
-      <div class="page-header" id="fork-me">
+      <div class="page-header">
         <h1><i class="fa fa-code-fork"></i> Fork me on GitHub <small>あなたも参加してみませんか？</small></h1>
       </div>
 
@@ -209,8 +223,10 @@
         <p>と、このように Fork してから変更、そして Pull request をお願いします。</p>
       </div>
 
+      </section>
+      <section id="license" data-section-menu="ライセンス">
 
-      <div class="page-header" id="license">
+      <div class="page-header">
         <h1><i class="fa fa-university"></i> ライセンス</h1>
       </div>
 
@@ -271,6 +287,8 @@ Font Awesome 4        </a>
   </div>
 </div>
 
+      </section>
+
     </div> <!-- /container -->
 
     <div class="footer">
@@ -325,10 +343,13 @@ Font Awesome 4        </a>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="components/jquery/dist/jquery.min.js"></script>
     <script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Timeline -->
     <script src="components/blueprint-vertical-timeline/js/modernizr.custom.js"></script>
+    <!-- Section menu -->
+    <script src="components/jQuery.sectionMenu/assets/js/jquery.fragmentscroll.min.js"></script>
+    <script src="components/jQuery.sectionMenu/assets/js/jquery.sectionmenu.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -336,6 +357,12 @@ Font Awesome 4        </a>
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-5908801-3', 'auto');
   ga('send', 'pageview');
+</script>
+
+<script>
+  $(document).ready(function(){
+    $('body').sectionMenu().fragmentScroll();
+  });
 </script>
 
   </body>

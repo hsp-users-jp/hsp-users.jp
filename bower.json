@@ -15,6 +15,7 @@
     "jquery": "^1.1.0",
     "bootstrap": "^3.3.6",
     "font-awesome": "^4.5.0",
-    "blueprint-vertical-timeline": "^1.0.1"
+    "blueprint-vertical-timeline": "^1.0.1",
+    "jQuery.sectionMenu": "https://github.com/miWebb/jQuery.sectionMenu.git#^1.0.1"
   }
 }

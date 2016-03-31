@@ -68,3 +68,23 @@ html {
 .cbp_tmlabel a {
   color: #fff;
 }
+
+/* -------------------------------------------------- */
+
+.section-menu * {
+  box-sizing: content-box;
+}
+
+.section-menu a {
+  color: #333;
+}
+
+.section-menu a:before {
+  background: rgba(128, 128, 128, 0.5);
+  width: 15px;
+  height: 15px;
+}
+
+.section-menu a:hover:before {
+  background: #ccc;
+}
