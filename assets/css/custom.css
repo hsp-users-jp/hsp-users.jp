@@ -88,3 +88,41 @@ html {
 .section-menu a:hover:before {
   background: #ccc;
 }
+
+/* -------------------------------------------------- */
+
+.section-menu a {
+  color: #000;
+}
+.section-menu a:hover:before {
+  background: none;
+}
+.cbp_tmtimeline > li {
+  list-style: none;
+}
+.cbp_tmtime span {
+  color: #bbbbbb !important;
+}
+.cbp_tmlabel , .cbp_tmicon {
+  color: #000 !important;
+  background: #bbbbbb !important;
+  border-radius: 0 !important;
+}
+.cbp_tmlabel:after {
+  border-right-color: #bbbbbb !important;
+}
+.cbp_tmicon {
+  box-shadow: 0 0 0 8px #bbbbbb !important;
+}
+.cbp_tmlabel a {
+  color: #000 !important;
+}
+.cbp_tmlabel a:hover {
+  color: #fff !important;
+}
+.cbp_tmtimeline:before {
+  background: #777 !important;
+}
+body {
+  visibility: hidden;
+}
