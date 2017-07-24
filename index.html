@@ -23,6 +23,9 @@
     <!-- Section menu -->
     <link href="components/jQuery.sectionMenu/assets/css/jquery.sectionmenu.css" rel="stylesheet">
 
+    <!-- FlipClock.js -->
+    <link href="components/flipclock/compiled/flipclock.css" rel="stylesheet">
+
     <!-- Custom styles for this page -->
     <link href="assets/css/custom.css" rel="stylesheet">
 
@@ -74,6 +77,15 @@
       </section>
 
       <section id="tweet" data-section-menu="ツイート">
+      <div class="page-header">
+        <h1><i class="fa fa-trophy"></i> HSP プログラムコンテスト 2017</h1>
+      </div>
+
+<div class="event-countdown"></div>
+
+      </section>
+
+      <section id="hsp-event" data-section-menu="イベント">
       <div class="page-header">
         <h1><i class="fa fa-twitter"></i> #hsp3 <small>HSP公式推奨タグでつぶやかれている内容</small></h1>
       </div>
@@ -348,6 +360,8 @@ Font Awesome 4        </a>
     <!-- Section menu -->
     <script src="components/jQuery.sectionMenu/assets/js/jquery.fragmentscroll.min.js"></script>
     <script src="components/jQuery.sectionMenu/assets/js/jquery.sectionmenu.min.js"></script>
+    <!-- FlipClock.js  -->
+    <script src="components/flipclock/compiled/flipclock.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 <script>
@@ -362,6 +376,15 @@ Font Awesome 4        </a>
 <script>
   $(document).ready(function(){
     $('body').sectionMenu().fragmentScroll();
+    // Count dwon for HSP program contest 2017
+    FlipClock.Lang.Japanese = { 'years': '年', 'months': '月', 'days': '日', 'hours': '時', 'minutes': '分', 'seconds': '秒' };
+    var eventContown = $('.event-countdown').FlipClock(new Date(2017,8-1,1,0,0,0), {
+        language: 'Japanese',
+        clockFace: 'DailyCounter',
+        countdown: true,
+    });
+    //eventContown.on('', function() {
+    //});
   });
 </script>
 
