@@ -88,3 +88,12 @@ html {
 .section-menu a:hover:before {
   background: #ccc;
 }
+
+.event-countdown-container {
+    text-align: center;
+}
+
+.event-countdown {
+    display: inline-block;
+    width: auto !important;
+}

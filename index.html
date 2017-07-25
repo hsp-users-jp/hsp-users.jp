@@ -53,6 +53,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="#home">トップ</a></li>
+            <li><a href="#hsp-event">イベント</a></li>
             <li><a href="#tweet">ツイート</a></li>
             <li><a href="#history">歴史</a></li>
             <li><a href="#link">リンク</a></li>
@@ -76,16 +77,20 @@
       </div>
       </section>
 
-      <section id="tweet" data-section-menu="ツイート">
+      <section id="hsp-event" data-section-menu="イベント">
       <div class="page-header">
         <h1><i class="fa fa-trophy"></i> HSP プログラムコンテスト 2017</h1>
       </div>
 
-<div class="event-countdown"></div>
+<p class="text-center"><a href="http://hsp.tv/contest2017/" title="HSPプログラムコンテスト2017">HSPプログラムコンテスト2017</a>の受付開始まで、あと</p>
+
+<div class="event-countdown-container"><div class="event-countdown"></div></div>
+
+<p class="text-center"><a class="btn btn-lg btn-success" href="http://hsp.tv/contest2017/cntst_regulation.html" role="button">応募規約を読む</a></p>
 
       </section>
 
-      <section id="hsp-event" data-section-menu="イベント">
+      <section id="tweet" data-section-menu="ツイート">
       <div class="page-header">
         <h1><i class="fa fa-twitter"></i> #hsp3 <small>HSP公式推奨タグでつぶやかれている内容</small></h1>
       </div>
@@ -378,11 +383,12 @@ Font Awesome 4        </a>
     $('body').sectionMenu().fragmentScroll();
     // Count dwon for HSP program contest 2017
     FlipClock.Lang.Japanese = { 'years': '年', 'months': '月', 'days': '日', 'hours': '時', 'minutes': '分', 'seconds': '秒' };
-    var eventContown = $('.event-countdown').FlipClock(new Date(2017,8-1,1,0,0,0), {
+    var eventContown = $('.event-countdown').FlipClock((new Date(2017,8-1,1,0,0,0).getTime() - new Date().getTime()) / 1000, {
         language: 'Japanese',
         clockFace: 'DailyCounter',
-        countdown: true,
+        countdown: true
     });
+    //eventContown.setFaceValue(1000);
     //eventContown.on('', function() {
     //});
   });

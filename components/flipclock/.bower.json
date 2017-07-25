@@ -1,6 +1,5 @@
 {
   "name": "flipclock",
-  "version": "0.7.7",
   "homepage": "https://github.com/objectivehtml/FlipClock",
   "authors": [
     "Objective HTML",
@@ -19,14 +18,13 @@
   "dependencies": {
     "jquery": ">=1.7.0"
   },
-  "_release": "0.7.7",
+  "_release": "17d9f3f1dd",
   "_resolution": {
-    "type": "version",
-    "tag": "0.7.7",
-    "commit": "f50918c885183c99b9137fec2b99587b52d8d5e5"
+    "type": "branch",
+    "branch": "master",
+    "commit": "17d9f3f1dd0da4918b3ff5dad4b03d737f9fb744"
   },
   "_source": "https://github.com/objectivehtml/FlipClock.git",
-  "_target": "^0.7.7",
-  "_originalSource": "FlipClock",
-  "_direct": true
+  "_target": "master",
+  "_originalSource": "flipclock"
 }
