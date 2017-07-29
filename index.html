@@ -23,8 +23,8 @@
     <!-- Section menu -->
     <link href="components/jQuery.sectionMenu/assets/css/jquery.sectionmenu.css" rel="stylesheet">
 
-    <!-- FlipClock.js -->
-    <link href="components/flipclock/compiled/flipclock.css" rel="stylesheet">
+    <!-- jquery.countdown -->
+    <link href="assets/css/countdown.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
     <link href="assets/css/custom.css" rel="stylesheet">
@@ -78,7 +78,10 @@
            <i class="fa fa-html5 fa-2x"></i>
            <i class="fa fa-linux fa-2x"></i><span style="vertical-align: super;">*</span></p>
         <p><small style="font-size: 60%">* <a href="http://hsp.tv/make/hsp3linux_pi.html" title="HSP3 for Linux/Raspberry Pi">HSP3 for Linux/Raspberry Pi</a> はβ版です。 </small></p>
-        <p><a class="btn btn-lg btn-success" href="http://hsp.tv/" role="button">HSP 3 をダウンロード</a></p>
+        <p>
+          <a class="btn btn-lg btn-success" href="http://hsp.tv/" role="button">HSP 3 をダウンロード</a>
+          <a class="btn btn-lg btn-info contest2017-end" style="display: none" href="#hsp-event"><i class="fa fa-trophy"></i> HSP プログラムコンテスト 2017 開催中！</a>
+        </p>
       </div>
       </section>
 
@@ -87,11 +90,30 @@
         <h1><i class="fa fa-trophy"></i> HSP プログラムコンテスト 2017</h1>
       </div>
 
+<div class="contest2017-start">
 <p class="text-center"><a href="http://hsp.tv/contest2017/" title="HSPプログラムコンテスト2017">HSPプログラムコンテスト2017</a>の受付開始まで、あと</p>
 
-<div class="event-countdown-container"><div class="event-countdown"></div></div>
+<div class="event-countdown-container">
+  <div class="event-countdown"></div>
+</div>
 
-<p class="text-center"><a class="btn btn-lg btn-success" href="http://hsp.tv/contest2017/cntst_regulation.html" role="button">応募規約を読む</a></p>
+<p class="text-center">
+  <a class="btn btn-lg btn-success" href="http://hsp.tv/contest2017/cntst_regulation.html" role="button">応募規約を読む</a>
+</p>
+</div>
+
+<div class="contest2017-end" style="display: none">
+<p class="text-center"><a href="http://hsp.tv/contest2017/" title="HSPプログラムコンテスト2017">HSPプログラムコンテスト2017</a>の受付終了まで、あと</p>
+
+<div class="event-countdown-container">
+  <div class="event-countdown"></div>
+</div>
+
+<p class="text-center">
+  <a class="btn btn-lg btn-success" href="https://dev.onionsoft.net/seed/" role="button">参加登録を行う</a>
+  <a class="btn btn-lg btn-default" href="http://hsp.tv/contest2017/list_n1.html" role="button">応募作品を楽しむ</a>
+</p>
+</div>
 
       </section>
 
@@ -370,8 +392,8 @@ Font Awesome 4        </a>
     <!-- Section menu -->
     <script src="components/jQuery.sectionMenu/assets/js/jquery.fragmentscroll.min.js"></script>
     <script src="components/jQuery.sectionMenu/assets/js/jquery.sectionmenu.min.js"></script>
-    <!-- FlipClock.js  -->
-    <script src="components/flipclock/compiled/flipclock.min.js"></script>
+    <!-- jquery.countdown  -->
+    <script src="components/jquery.countdown/dist/jquery.countdown.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 <script>
@@ -387,15 +409,26 @@ Font Awesome 4        </a>
   $(document).ready(function(){
     $('body').sectionMenu().fragmentScroll();
     // Count dwon for HSP program contest 2017
-    FlipClock.Lang.Japanese = { 'years': '年', 'months': '月', 'days': '日', 'hours': '時', 'minutes': '分', 'seconds': '秒' };
-    var eventContown = $('.event-countdown').FlipClock((new Date(2017,8-1,1,0,0,0).getTime() - new Date().getTime()) / 1000, {
-        language: 'Japanese',
-        clockFace: 'DailyCounter',
-        countdown: true
-    });
-    //eventContown.setFaceValue(1000);
-    //eventContown.on('', function() {
-    //});
+    var timeOfStart = new Date(2017, 8-1, 1, 0, 0, 0).getTime();
+    var timeOfEnd   = new Date(2017,11-1, 1, 0, 0, 0).getTime();
+    //timeOfStart=new Date(2017, 7-1, 30, 0, 42, 0).getTime();
+    $('.contest2017-start .event-countdown').countdown(timeOfStart, {defer: true })
+      .on('update.countdown', function (event) {
+        $(this).html(event.strftime('%D 日と %H 時間 %M 分 %S 秒'));
+      })
+      .on('finish.countdown', function (event) {
+        $('.contest2017-start').hide();
+        $('.contest2017-end').show();
+        $('.contest2017-end .event-countdown').countdown(timeOfEnd, {defer: true })
+          .on('update.countdown', function (event) {
+            $(this).html(event.strftime('%-w 週間と %-d 日と<br /> %H 時間 %M 分 %S 秒'));
+          })
+          .on('finish.countdown', function (event) {
+            
+          })
+          .countdown('start');
+      })
+      .countdown('start');
   });
 </script>
 

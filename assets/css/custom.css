@@ -96,4 +96,5 @@ html {
 .event-countdown {
     display: inline-block;
     width: auto !important;
+    font-size: 40pt;
 }
