@@ -103,14 +103,14 @@
 </div>
 
 <div class="contest2017-end" style="display: none">
-<p class="text-center"><a href="http://hsp.tv/contest2017/" title="HSPプログラムコンテスト2017">HSPプログラムコンテスト2017</a>の受付終了まで、あと</p>
+<p class="text-center"><a href="http://hsp.tv/contest2017/" title="HSPプログラムコンテスト2017">HSPプログラムコンテスト2017</a>の最終選考結果の発表まで、あと</p>
 
 <div class="event-countdown-container">
   <div class="event-countdown"></div>
 </div>
 
 <p class="text-center">
-  <a class="btn btn-lg btn-success" href="https://dev.onionsoft.net/seed/" role="button">参加登録を行う</a>
+  <a class="btn btn-lg btn-success" href="http://hsp.tv/contest2017/cntst_result.html" role="button">一次審査結果を見る</a>
   <a class="btn btn-lg btn-default" href="http://hsp.tv/contest2017/list_n1.html" role="button">応募作品を楽しむ</a>
 </p>
 </div>
@@ -226,7 +226,15 @@
       		</div>
       	</li>
         <li>
-      		<time class="cbp_tmtime" datetime="2016"><span>現在</span></time>
+      		<time class="cbp_tmtime" datetime="2017-10-20"><span>2017</span></time>
+      		<div class="cbp_tmicon"><i class="fa fa-windows fa-lg"></i></div>
+      		<div class="cbp_tmlabel">
+      			<h2>HSP 3.5 公開</h2>
+      			<p>実行ファイル作成時のアイコン書き換え、バージョン定義、UPX 圧縮に対応。</p>
+      		</div>
+      	</li>
+        <li>
+      		<time class="cbp_tmtime" datetime="2017"><span>現在</span></time>
       		<div class="cbp_tmicon"><i class="fa fa-angle-double-down fa-lg"></i></div>
       		<div class="cbp_tmlabel" style="visibility: hidden;">
       		</div>
@@ -409,8 +417,8 @@ Font Awesome 4        </a>
   $(document).ready(function(){
     $('body').sectionMenu().fragmentScroll();
     // Count dwon for HSP program contest 2017
-    var timeOfStart = new Date(2017, 8-1, 1, 0, 0, 0).getTime();
-    var timeOfEnd   = new Date(2017,11-1, 1, 0, 0, 0).getTime();
+    var timeOfStart = new Date(2017, 11-17, 1, 0, 0, 0).getTime();
+    var timeOfEnd   = new Date(2017,12-1, 1, 0, 0, 0).getTime();
     //timeOfStart=new Date(2017, 7-1, 30, 0, 42, 0).getTime();
     $('.contest2017-start .event-countdown').countdown(timeOfStart, {defer: true })
       .on('update.countdown', function (event) {
