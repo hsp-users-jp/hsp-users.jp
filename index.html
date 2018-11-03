@@ -90,31 +90,15 @@
       <div class="page-header">
         <h1><i class="fa fa-trophy"></i> HSP プログラムコンテスト 2018</h1>
       </div>
+      
+      <h2 class="text-center">ただいま一次審査...</h2>
 
-      <div class="contest2018-start">
-        <p class="text-center"><a href="http://hsp.tv/contest2018/" title="HSPプログラムコンテスト2018">HSPプログラムコンテスト2018</a>の受付開始まで、あと</p>
-
-        <div class="event-countdown-container">
-          <div class="event-countdown"></div>
-        </div>
-
+      <div>
         <p class="text-center">
-          <a class="btn btn-lg btn-success" href="http://hsp.tv/contest2018/cntst_regulation.html" role="button">応募規約を読む</a>
-        </p>
-      </div>
-          
-      <div class="contest2018-end" style="display: none">
-        <p class="text-center"><a href="http://hsp.tv/contest2018/" title="HSPプログラムコンテスト2018">HSPプログラムコンテスト2018</a>の受付終了まで、あと</p>
-          
-        <div class="event-countdown-container">
-          <div class="event-countdown"></div>
-        </div>
-        <p class="text-center">
-          <a class="btn btn-lg btn-success" href="https://dev.onionsoft.net/seed/" role="button">参加登録を行う</a>
           <a class="btn btn-lg btn-default" href="http://hsp.tv/contest2018/list_n1.html" role="button">応募作品を楽しむ</a>
         </p>
       </div>
-            
+
       </section>
 
       <section id="tweet" data-section-menu="ツイート">
@@ -444,26 +428,6 @@ Font Awesome 4        </a>
 <script>
   $(document).ready(function(){
     $('body').sectionMenu().fragmentScroll();
-    // Count dwon for HSP program contest 2018
-    var timeOfStart = new Date(2018, 8-1, 1, 0, 0, 0).getTime();
-    var timeOfEnd   = new Date(2018,11-1, 1, 0, 0, 0).getTime();
-    $('.contest2018-start .event-countdown').countdown(timeOfStart, {defer: true })
-      .on('update.countdown', function (event) {
-        $(this).html(event.strftime('%D 日と %H 時間 %M 分 %S 秒'));
-      })
-      .on('finish.countdown', function (event) {
-        $('.contest2018-start').hide();
-        $('.contest2018-end').show();
-        $('.contest2018-end .event-countdown').countdown(timeOfEnd, {defer: true })
-          .on('update.countdown', function (event) {
-            $(this).html(event.strftime('%-w 週間と %-d 日と<br /> %H 時間 %M 分 %S 秒'));
-          })
-          .on('finish.countdown', function (event) {
-            
-          })
-          .countdown('start');
-      })
-      .countdown('start');
   });
 </script>
 
